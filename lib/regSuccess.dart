@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:trueguide/homescreen/homescreen.dart';
-class RegistrationSuccessPage extends StatefulWidget {
+class RegistrationSuccess extends StatefulWidget {
   @override
   _RegistrationSuccessPageState createState() => _RegistrationSuccessPageState();
 }
 
-class _RegistrationSuccessPageState extends State<RegistrationSuccessPage>
+class _RegistrationSuccessPageState extends State<RegistrationSuccess>
     with TickerProviderStateMixin {
   late AnimationController _iconController;
   late AnimationController _textController;
@@ -91,7 +91,7 @@ class _RegistrationSuccessPageState extends State<RegistrationSuccessPage>
                 child: Column(
                   children: [
                     Text(
-                      "Registration Successful!",
+                      "Congratulations",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -100,7 +100,7 @@ class _RegistrationSuccessPageState extends State<RegistrationSuccessPage>
                     ),
                     SizedBox(height: 10),
                     Text(
-                      "Your account has been created successfully.",
+                      "You have been successfully registered.",
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 16, color: Colors.grey[700]),
                     ),

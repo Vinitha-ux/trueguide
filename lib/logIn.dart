@@ -81,7 +81,8 @@ class _loginState extends State<login> {
                           Bottom_Naviga()),
                     );
                   },
-                  child: Text("LOGIN",style:
+                  child: Text("LOGIN",
+                    style:
                   GoogleFonts.lato(textStyle: TextStyle(fontSize: 15,
                       fontWeight: FontWeight.bold,color: Colors.white)),),
                   style: ElevatedButton.styleFrom(

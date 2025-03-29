@@ -2,11 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trueguide/accountscreen/special%20day%20poster.dart';
+import 'package:trueguide/accountscreen/wishlist.dart';
 import 'package:trueguide/logout.dart';
 import 'business.dart';
 import 'dashboard.dart';
 import 'helpscreen.dart';
 import 'lang.dart';
+import 'message.dart';
+import 'notification.dart';
 
 
 class Account extends StatefulWidget {
@@ -26,11 +29,11 @@ class _Account_ScreenState extends State<Account> {
     {"title": "Account Setting", "icon": Icons.manage_accounts_outlined,"screen": Buss()},
     {"title": "My Digital Card", "icon": Icons.credit_card},
     {"title": "Special Day Poster", "icon": Icons.image_outlined,'screen': Special_day()},
-    {"title": "Wishlist", "icon": Icons.monitor},
-    {"title": "My Message", "icon": Icons.message},
+    {"title": "Wishlist", "icon": Icons.monitor,"screen":wishlist()},
+    {"title": "My Message", "icon": Icons.message,"screen":message()},
     {"title": "Dashboard", "icon": Icons.dashboard,"screen":Dashboard()},
     {"title": "Languages", "icon": Icons.language,'screen': Language_Screen()},
-    {"title": "Subscription Management", "icon": Icons.subscriptions_outlined},
+    {"title": "Subscription Management", "icon": Icons.subscriptions_outlined,"screen":notify()},
     {"title": "Feedback & Support", "icon": Icons.feedback_outlined,"screen": Help_screen()},
     {"title": "Logout", "icon": Icons.logout,"screen":Logout()},
   ];
