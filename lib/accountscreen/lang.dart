@@ -53,7 +53,7 @@ class _Language_ScreenState extends State<Language_Screen> {
           child: Column(children: [
             Container(height: 200,width: 200,
               decoration: BoxDecoration(
-                image: DecorationImage(image: AssetImage("assets/language.png"),fit: BoxFit.fill),
+                image: DecorationImage(image: AssetImage("assets/images/language.png"),fit: BoxFit.fill),
               ),
             ),
             SizedBox(height: 10),

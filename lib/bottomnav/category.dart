@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'architecture.dart';
-import 'landpromoters.dart';
 
 class Category extends StatefulWidget {
   const Category({super.key});
@@ -85,13 +84,13 @@ class _Category_ScreenState extends State<Category> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => architecture()));
+                                      builder: (context) => Architecture()));
                               break;
                             case 'Land Promoters':
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => landpromoters()));
+                                      builder: (context) => Architecture()));
                               break;
 
                             default:

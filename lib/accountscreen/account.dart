@@ -1,6 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:trueguide/accountscreen/special%20day%20poster.dart';
+import 'package:trueguide/logout.dart';
+import 'business.dart';
+import 'dashboard.dart';
+import 'helpscreen.dart';
+import 'lang.dart';
 
 
 class Account extends StatefulWidget {
@@ -17,24 +23,22 @@ class _Account_ScreenState extends State<Account> {
     {"title": "Add Product"},
   ];
   final List<Map<String, dynamic>> menu = [
-    {"title": "Account Setting", "icon": Icons.manage_accounts_outlined},
+    {"title": "Account Setting", "icon": Icons.manage_accounts_outlined,"screen": Buss()},
     {"title": "My Digital Card", "icon": Icons.credit_card},
-    {"title": "Special Day Poster", "icon": Icons.image_outlined},
+    {"title": "Special Day Poster", "icon": Icons.image_outlined,'screen': Special_day()},
     {"title": "Wishlist", "icon": Icons.monitor},
-    {"title": "My Message", "icon": Icons.monitor},
-    {"title": "Dashboard", "icon": Icons.dashboard},
-    {"title": "Languages", "icon": Icons.language},
+    {"title": "My Message", "icon": Icons.message},
+    {"title": "Dashboard", "icon": Icons.dashboard,"screen":Dashboard()},
+    {"title": "Languages", "icon": Icons.language,'screen': Language_Screen()},
     {"title": "Subscription Management", "icon": Icons.subscriptions_outlined},
-    {"title": "Feedback & Support", "icon": Icons.feedback_outlined},
-    {"title": "Logout", "icon": Icons.logout},
+    {"title": "Feedback & Support", "icon": Icons.feedback_outlined,"screen": Help_screen()},
+    {"title": "Logout", "icon": Icons.logout,"screen":Logout()},
   ];
   List icon = [
     "assets/images/ac1.png",
     "assets/images/ac2.png",
     "assets/images/ac3.png",
   ];
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +86,7 @@ class _Account_ScreenState extends State<Account> {
                       Padding(
                           padding: const EdgeInsets.only(bottom: 150),
                           child: IconButton(onPressed: (){
-                            Navigator.pop(context);
+
                           }, icon:Icon(Icons.arrow_back,color: Color(0xff742B88),))
                       ),
                       Padding(
@@ -190,6 +194,14 @@ class _Account_ScreenState extends State<Account> {
                           leading: Icon(menu[index]["icon"], color: Colors.black, size: 20),
                           title: Text(menu[index]["title"]),
                           trailing: Icon(Icons.arrow_forward_ios),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => menu[index]["screen"],
+                              ),
+                            );
+                          },
                         ),
                       ),
                     );
@@ -201,3 +213,4 @@ class _Account_ScreenState extends State<Account> {
     );
   }
 }
+
