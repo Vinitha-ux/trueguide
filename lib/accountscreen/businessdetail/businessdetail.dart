@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:trueguide/bottomnav/Bottom_Naviga.dart';
+
+import '../kyc/kyc.dart';
 class Busines extends StatelessWidget {
   const Busines({super.key});
 
@@ -10,7 +13,12 @@ class Busines extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Bottom_Naviga(),
+              ),
+            );
           },
         ),
       ),
@@ -86,7 +94,14 @@ class FormFields extends StatelessWidget {
           title: Text("KYC Verification"),
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Kkyc(),
+                  ),
+                );
+              },
               child: Text("Upload KYC documents here..."),
             ),
           ],

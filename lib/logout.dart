@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:trueguide/homescreen/homescreen.dart';
+import 'package:trueguide/logIn.dart';
 
 class Logout extends StatefulWidget {
   const Logout({super.key});
@@ -43,7 +43,7 @@ class _LogoutState extends State<Logout> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) =>
-                        Homepage1()),
+                        login()),
                   );
                 },
                 child: Text(
@@ -70,11 +70,6 @@ class _LogoutState extends State<Logout> {
               SizedBox(width: 10), // added space between buttons
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) =>
-                        Homepage1()),
-                  );
                 },
                 child: Text(
                   'No',

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:trueguide/accountscreen/special%20day%20poster.dart';
 import 'package:trueguide/accountscreen/wishlist.dart';
+import 'package:trueguide/bottomnav/Bottom_Naviga.dart';
 import 'package:trueguide/logout.dart';
 import 'business.dart';
 import 'dashboard.dart';
@@ -9,7 +10,6 @@ import 'helpscreen.dart';
 import 'lang.dart';
 import 'message.dart';
 import 'notification.dart';
-
 
 class Account extends StatefulWidget {
   const Account({super.key});
@@ -88,7 +88,12 @@ class _Account_ScreenState extends State<Account> {
                       Padding(
                           padding: const EdgeInsets.only(bottom: 150),
                           child: IconButton(onPressed: (){
-
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Bottom_Naviga(),
+                              ),
+                            );
                           }, icon:Icon(Icons.arrow_back,color: Color(0xff742B88),))
                       ),
                       Padding(
@@ -124,7 +129,8 @@ class _Account_ScreenState extends State<Account> {
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.green,
                                       ),
-                                      onPressed: (){}, child: Text("Active",style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 12,color: Colors.white)),)),
+                                      onPressed: (){}, child: Text("Active",style: GoogleFonts.poppins(
+                                      textStyle: TextStyle(fontSize: 12,color: Colors.white)),)),
                                 )
                               ],
                             ),

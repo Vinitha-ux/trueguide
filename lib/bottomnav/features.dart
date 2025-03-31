@@ -70,7 +70,7 @@ class _FeaturesScreenState extends State<Features> {
               Text(
                 "List of Features",
                 style: GoogleFonts.lato(
-                  textStyle: TextStyle(fontSize: 16, color: Colors.black),
+                  textStyle: TextStyle(fontSize: 12, color: Colors.black),
                 ),
               ),
               SizedBox(height: 10),
@@ -96,7 +96,7 @@ class _FeaturesScreenState extends State<Features> {
                           title: Text(
                             features[index]["title"]!,
                             style: GoogleFonts.lato(
-                              textStyle: TextStyle(fontSize: 16, color: Colors.white),
+                              textStyle: TextStyle(fontSize: 10, color: Colors.white),
                             ),
                           ),
                         ),
@@ -107,7 +107,7 @@ class _FeaturesScreenState extends State<Features> {
               ),
               Text(
                 "Testimonial",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 5),
               Container(
@@ -135,7 +135,7 @@ class _FeaturesScreenState extends State<Features> {
                           "Hari",
                           style: GoogleFonts.lato(
                             textStyle:
-                            TextStyle(fontWeight: FontWeight.bold, fontSize: 10),
+                            TextStyle(fontWeight: FontWeight.bold, fontSize: 8),
                           ),
                         ),
                       ],
@@ -144,27 +144,27 @@ class _FeaturesScreenState extends State<Features> {
                     Text(
                       "02 Review",
                       style: GoogleFonts.lato(
-                        textStyle: TextStyle(fontSize: 10, color: Colors.black),
+                        textStyle: TextStyle(fontSize: 8, color: Colors.black),
                       ),
                     ),
                     SizedBox(height: 5),
                     Text(
                       "“I had a great experience with srkvishahafelekits. They completed my home renovation on time and exceeded my expectations. Highly professional and transparent in their pricing!”",
                       style: GoogleFonts.lato(
-                        textStyle: TextStyle(fontSize: 10, color: Colors.black),
+                        textStyle: TextStyle(fontSize: 8, color: Colors.black),
                       ),
                     ),
                     SizedBox(height: 5),
                     Text(
                       "Category: Builders",
                       style: GoogleFonts.lato(
-                        textStyle: TextStyle(fontSize: 10, color: Colors.black),
+                        textStyle: TextStyle(fontSize: 8, color: Colors.black),
                       ),
                     ),
                     Text(
                       "Date: December 10, 2024",
                       style: GoogleFonts.lato(
-                        textStyle: TextStyle(fontSize: 10, color: Colors.black),
+                        textStyle: TextStyle(fontSize: 8, color: Colors.black),
                       ),
                     ),
                   ],
