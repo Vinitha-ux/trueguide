@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../bottomnav/Bottom_Naviga.dart';
+import 'bbusdetail.dart';
 
 class personal extends StatefulWidget {
   const personal({super.key});
@@ -67,7 +67,7 @@ class _PersonalState extends State<personal> {
                         // Navigate to Business Detail screen
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => BusinessDetailScreen()),
+                          MaterialPageRoute(builder: (context) => BusinessDetail()),
                         );
                       },
                       child: Container(
@@ -145,7 +145,12 @@ class _PersonalState extends State<personal> {
                   width: 300,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => BusinessDetail()),
+                      );
+                    },
                     child: Text('Save Details', style: TextStyle(color: Colors.white)),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.purple,
@@ -201,7 +206,7 @@ class _BusinessDetailScreenState extends State<BusinessDetailScreen> {
                     child: GestureDetector(
                       onTap: () {
                         setState(() {
-                          selectedTab = 1;
+                          selectedTab = 0;
                         });
                       },
                       child: Container(
@@ -230,7 +235,7 @@ class _BusinessDetailScreenState extends State<BusinessDetailScreen> {
                       },
                       child: Container(
                         padding: EdgeInsets.all(16.0),
-                        color: selectedTab == 1 ? Colors.grey : Colors.white,
+                        color: selectedTab == 0 ? Colors.grey : Colors.white,
                         child: Center(
                           child: Text(
                             'Business Detail',

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:trueguide/accountscreen/businessdetail/busdet1.dart';
 import '../personal.dart';
+import 'businessdetail.dart';
 
 
-class BusinessDet2 extends StatefulWidget {
+  class BusinessDet2 extends StatefulWidget {
   @override
   _BusinessDetailScreenState createState() => _BusinessDetailScreenState();
 }
@@ -314,7 +315,7 @@ class _BusinessDetailScreenState extends State<BusinessDet2> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => BusinessDetailScreen()),
+                        MaterialPageRoute(builder: (context) => Busines()),
                       );
                     },
                     child: Text(

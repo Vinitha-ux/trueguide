@@ -70,7 +70,8 @@ class _humanState extends State<human> {
                                   onPressed: () {},
                                   child: Text(
                                     'Edit Image',
-                                    style: TextStyle(color: Colors.white,fontSize: 15),
+                                    style: TextStyle(color: Colors.white,
+                                        fontSize: 15),
                                   ),
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.blue,

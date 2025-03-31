@@ -69,7 +69,8 @@ class _Language_ScreenState extends State<Language_Screen> {
                     decoration: BoxDecoration(
                       border: Border(
 
-                        bottom: BorderSide(color: Colors.black, width: 0.50),
+                        bottom: BorderSide(color: Colors.black,
+                            width: 0.50),
                       ),
                     ),
                     child: ListTile(

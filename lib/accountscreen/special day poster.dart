@@ -54,7 +54,7 @@ class _Special_dayState extends State<Special_day> {
     ),
     SizedBox(width: 20),
     Container(
-    height: 20,
+    height: 30,
     width: 150,
     decoration: BoxDecoration(
     border: Border.all(color: Color(0xffBEBCBC)),

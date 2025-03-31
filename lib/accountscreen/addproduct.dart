@@ -103,7 +103,8 @@ class _AddProductState extends State<AddProduct> {
     ),
     ],
     )
-        : Image.file(_image!, fit: BoxFit.cover, height: 150, width: double.infinity),
+        : Image.file(_image!, fit: BoxFit.cover, height: 150,
+        width: double.infinity),
     SizedBox(height: 8),
     ElevatedButton(
     onPressed: _pickImage,

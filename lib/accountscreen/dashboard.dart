@@ -112,7 +112,7 @@ class Dashboard extends StatelessWidget {
           crossAxisCount: 2,
           crossAxisSpacing: 10,
           mainAxisSpacing: 10,
-          childAspectRatio: 1,
+          childAspectRatio: 2,
         ),
         itemBuilder: (context, index) {
           return _buildGridItem(index);

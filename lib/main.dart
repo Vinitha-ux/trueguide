@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trueguide/splash.dart';
 
-
 void main() {
   runApp(const MyApp());
 }

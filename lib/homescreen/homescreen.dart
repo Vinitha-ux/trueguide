@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../accountscreen/account.dart';
+
 class Homepage1 extends StatefulWidget {
   const Homepage1({Key? key}) : super(key: key);
 
@@ -79,7 +81,23 @@ class _HomepageState extends State<Homepage1> {
           ),
         ],
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Account"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Account()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -325,6 +343,34 @@ class _HomepageState extends State<Homepage1> {
           ],
         ),
       ),
+    );
+  }
+}
+
+
+
+class Drawer1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Account"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Account()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+      body: Center(child: Text("Home Screen")),
     );
   }
 }

@@ -20,7 +20,8 @@ class _ArchitectureState extends State<Architecture> {
         leading: IconButton(
           onPressed: () {
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Bottom_Naviga()));
+                context, MaterialPageRoute(builder: (context) =>
+                Bottom_Naviga()));
           },
           icon: Icon(Icons.arrow_back),
         ),
@@ -112,7 +113,8 @@ class Popup extends StatelessWidget {
                       filter[index],
                       style: TextStyle(color: Colors.black),
                     ),
-                    style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(backgroundColor:
+                    Colors.white),
                   ),
                 );
               }),

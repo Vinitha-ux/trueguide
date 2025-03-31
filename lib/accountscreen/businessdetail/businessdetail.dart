@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class BusinessDetailScreen extends StatelessWidget {
-  const BusinessDetailScreen({super.key});
+class Busines extends StatelessWidget {
+  const Busines({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,31 +17,48 @@ class BusinessDetailScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              SectionHeader(title: "Personal Detail"),
-              SectionHeader(title: "Business Detail"),
-              LinearProgressIndicator(color: Colors.purple),
-              FormFields(),
-            ],
-          ),
+          child:
+
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                        ),
+                        child: Text("Personal Detail"),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border(
+                            bottom: BorderSide(color: Colors.black, width: 2),
+                          ),
+                        ),
+                        child: Text(
+                          "Business Detail",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                FormFields(),
+              ],
+            ),
+
+
+
         ),
       ),
-    );
-  }
-}
-
-class SectionHeader extends StatelessWidget {
-  final String title;
-  const SectionHeader({required this.title, super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: const EdgeInsets.all(12.0),
-      child: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
     );
   }
 }
@@ -75,6 +92,25 @@ class FormFields extends StatelessWidget {
           ],
         ),
         SizedBox(height: 230),
+        SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.purple,
+              padding: EdgeInsets.symmetric(vertical: 16),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Busines()),
+              );
+            },
+            child: Text(
+              "Saved Detail",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ),
       ],
     );
   }

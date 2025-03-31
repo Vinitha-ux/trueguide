@@ -30,8 +30,8 @@ class _BussState extends State<Buss> {
           ListTile(
             leading: ConstrainedBox(
               constraints: const BoxConstraints(
-                minWidth: 44,
-                minHeight: 44,
+                minWidth: 54,
+                minHeight: 54,
                 maxWidth: 64,
                 maxHeight: 64,
               ),
